@@ -28,10 +28,7 @@ anterior.addEventListener("click",()=>{
         offset = 1;
         
         
-        fetchpokemons(offset, limit)
-       
-       
-       
+        fetchpokemons(offset, limit) 
     }
     
         );
@@ -50,10 +47,6 @@ siguiente.addEventListener("click", ()=>{
 
 console.log(anterior)
 
-
-
-
-
 button.addEventListener("click",(e)=>{
     e.preventDefault();
 
@@ -63,14 +56,7 @@ button.addEventListener("click",(e)=>{
       }
       
       
-      traerpokemon(input.value);
-
-            
-    
-    
-    
-   
-   
+      traerpokemon(input.value);  
 });
 
 function traerpokemon(pokemon){
@@ -85,21 +71,9 @@ function traerpokemon(pokemon){
     })
 
     .then((data) => { console.log(data)
-        
-      
-        
-    
-        crearPokemon(data);
-       
-        
-        
-     
-        
-        
+        crearPokemon(data);  
     });}
    
-
-
 function crearPokemon(pokemon) {
     const img = document.createElement('img');
     img.src = pokemon.sprites.front_default;
@@ -109,7 +83,6 @@ function crearPokemon(pokemon) {
 
     const div = document.createElement('div')
     div.classList.add('pikacontainer')
-    
     
     
     const text = document.createElement("p")
@@ -127,13 +100,9 @@ function crearPokemon(pokemon) {
 }
 
 
-
 function frasealeatoria(frasesOak){
     
     return frasesOak[Math.floor(Math.random() * frasesOak.length)]
-    
-    
-    
 }
 
 function fetchpokemon(id){
@@ -148,11 +117,7 @@ function fetchpokemon(id){
             fetchpokemon(i)
         }
     }
-    
-   
-
-
-    
+  
 
 function cartapokemon(pokemon){
    
